@@ -23,7 +23,6 @@ export class ShortenUrlComponent implements OnInit {
 
     this.service.shortenUrl(this.url).subscribe(
       (res: any) => {
-        console.log(res);
         this.shortUrl = res.result;
         if (res.ok == true) {
           this.toastr.success('URL Shortened Successfully');
